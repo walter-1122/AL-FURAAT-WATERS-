@@ -482,6 +482,38 @@
       font-weight: 800;
     }
 
+    
+    /* SERVICES */
+    .services-section{
+      background:radial-gradient(circle at 12% 18%,rgba(56,189,248,.10),transparent 28%),
+                 radial-gradient(circle at 88% 78%,rgba(124,58,237,.09),transparent 30%),#f8fbff;
+    }
+    .services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px;}
+    .service-card{position:relative;min-height:330px;padding:32px;border:1px solid rgba(7,26,82,.09);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:0 18px 45px rgba(7,26,82,.08);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
+    .service-card::after{content:"";position:absolute;width:180px;height:180px;right:-90px;top:-90px;border-radius:50%;background:linear-gradient(135deg,rgba(56,189,248,.18),rgba(124,58,237,.14));pointer-events:none;}
+    .service-card:hover{transform:translateY(-7px);box-shadow:0 24px 60px rgba(7,26,82,.13);border-color:rgba(21,94,239,.22);}
+    .service-card.featured{color:#fff;background:linear-gradient(145deg,#071a52,#102d78 58%,#4c1d95);border-color:transparent;box-shadow:0 24px 60px rgba(7,26,82,.20);}
+    .service-card.featured::after{background:radial-gradient(circle,rgba(56,189,248,.24),transparent 68%);}
+    .service-number{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;margin-bottom:28px;border-radius:12px;background:#eff6ff;color:#155eef;font-size:12px;font-weight:800;letter-spacing:.08em;}
+    .service-card.featured .service-number{background:rgba(255,255,255,.12);color:#fff;}
+    .service-card h3{position:relative;z-index:1;margin:0 0 13px;font-size:23px;line-height:1.15;letter-spacing:-.03em;}
+    .service-card p{position:relative;z-index:1;margin:0;max-width:410px;color:#64748b;font-size:14px;line-height:1.8;}
+    .service-card.featured p{color:rgba(255,255,255,.78);}
+    .service-tags{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;}
+    .service-tag{display:inline-flex;align-items:center;padding:8px 11px;border-radius:999px;background:#f1f5f9;color:#334155;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;}
+    .service-card.featured .service-tag{background:rgba(255,255,255,.10);color:rgba(255,255,255,.90);}
+    .services-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:22px;padding:28px 32px;border-radius:24px;background:#fff;border:1px solid rgba(7,26,82,.08);box-shadow:0 16px 40px rgba(7,26,82,.06);}
+    .services-cta strong{display:block;margin-bottom:5px;color:#071a52;font-size:18px;letter-spacing:-.02em;}
+    .services-cta span{color:#64748b;font-size:13px;line-height:1.6;}
+    .services-cta a{flex:none;display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;background:#155eef;color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-decoration:none;transition:transform .2s ease,background .2s ease;}
+    .services-cta a:hover{transform:translateY(-2px);background:#071a52;}
+    @media (max-width:900px){
+      .services-grid{grid-template-columns:1fr;}
+      .service-card{min-height:auto;}
+      .services-cta{align-items:flex-start;flex-direction:column;}
+      .services-cta a{width:100%;}
+    }
+
     /* ELECTROLYTES */
 
     .electrolytes {
@@ -950,6 +982,7 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
+        <a href="#services">Services</a>
       <a href="electrolytes.html">Electrolytes</a>
       <a href="about.html">About Us</a>
       <a href="story.html">Our Story</a>
@@ -1170,7 +1203,45 @@
 
   </section>
 
-  <!-- ELECTROLYTES -->
+  
+    <!-- SERVICES -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">BUSINESS SOLUTIONS</div>
+            <h2 class="section-title">HYDRATION BUILT FOR BUSINESS.</h2>
+          </div>
+          <p class="section-subtitle">More than just bottled water. Explore practical hydration solutions for everyday supply, larger orders, and custom branded products.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Everyday Water Supply</h3>
+            <p>A flexible range of bottle sizes for everyday hydration needs at home, work, hospitality spaces, and events.</p>
+            <div class="service-tags"><span class="service-tag">250 ML</span><span class="service-tag">500 ML</span><span class="service-tag">1 L</span><span class="service-tag">13 L</span></div>
+          </article>
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Bulk &amp; Commercial Orders</h3>
+            <p>Hydration support for businesses, offices, events, hospitality, and other projects that need larger-volume orders.</p>
+            <div class="service-tags"><span class="service-tag">Offices</span><span class="service-tag">Events</span><span class="service-tag">Hospitality</span><span class="service-tag">Bulk Orders</span></div>
+          </article>
+          <article class="service-card featured">
+            <span class="service-number">03</span>
+            <h3>Your Bottle. Your Brand. Your Identity.</h3>
+            <p>Custom bottle moulding and branding solutions for companies looking to create a distinctive branded hydration product.</p>
+            <div class="service-tags"><span class="service-tag">Custom Moulding</span><span class="service-tag">Private Label</span><span class="service-tag">Branded Packaging</span><span class="service-tag">Corporate</span></div>
+          </article>
+        </div>
+        <div class="services-cta">
+          <div><strong>Have a custom hydration project in mind?</strong><span>Explore the service options above and tell us what you need.</span></div>
+          <a href="#services">DISCUSS YOUR PROJECT ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ELECTROLYTES -->
   <section class="electrolytes">
 
     <div>
@@ -1506,3 +1577,4 @@
 
 </body>
 </html>
+   
