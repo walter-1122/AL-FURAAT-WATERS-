@@ -1,1 +1,531 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop — AL FURAAT WATERS</title><link rel="stylesheet" href="../assets/style.css"></head><body><div class="announcement">REFRESH • REPLENISH • REPEAT</div><header class="nav"><a class="logo" href="../index.html"><span>AL</span> FURAAT <b>WATERS</b></a><button class="menu">☰</button><nav><a href="../index.html">Home</a><a class="active" href="shop.html">Shop</a><a href="electrolytes.html">Electrolytes</a><a href="about.html">About Us</a><a href="story.html">Our Story</a><a href="faq.html">FAQ</a></nav><div class="nav-actions"><a href="shop.html">Cart <i id="cartCount">0</i></a></div></header><section class="section"><p class="eyebrow">THE COLLECTION</p><h1 style="font-size:clamp(50px,8vw,100px);line-height:.9;color:#071a52;letter-spacing:-5px">SHOP<br><em>HYDRATION.</em></h1><p style="max-width:580px;color:#64748b;line-height:1.8">Choose your format. Product pricing, flavors and nutrition details are placeholders until finalized.</p><div class="products" style="margin-top:55px"><article class="product-card"><a href="product-250ml.html"><div class="product-visual cup"><span>250 ML</span><b>AL FURAAT</b></div></a><h3>250 ml Cup</h3><p>Single-serving hydration.</p><div class="product-bottom"><strong>PRICE TBD</strong><button onclick="addCart('250 ml Cup')">ADD +</button></div></article><article class="product-card"><a href="product-500ml.html"><div class="product-visual bottle500"><span>500 ML</span><b>AL FURAAT</b></div></a><h3>500 ml Bottle</h3><p>Everyday hydration.</p><div class="product-bottom"><strong>PRICE TBD</strong><button onclick="addCart('500 ml Bottle')">ADD +</button></div></article><article class="product-card"><a href="product-1l.html"><div class="product-visual bottle1"><span>1 L</span><b>AL FURAAT</b></div></a><h3>1 L Bottle</h3><p>Longer-day hydration.</p><div class="product-bottom"><strong>PRICE TBD</strong><button onclick="addCart('1 L Bottle')">ADD +</button></div></article><article class="product-card"><a href="product-13l.html"><div class="product-visual bottle1"><span>13 L</span><b>AL FURAAT</b></div></a><h3>13 L Bottle</h3><p>Home & workplace hydration.</p><div class="product-bottom"><strong>PRICE TBD</strong><button onclick="addCart('13 L Bottle')">ADD +</button></div></article></div></section><footer><div class="footer-bottom"><span>© 2026 AL FURAAT WATERS</span><a href="../index.html">Home</a></div></footer><script src="../assets/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop | AL FURAAT WATERS</title>
+
+<style>
+:root{
+  --navy:#06163f;
+  --blue:#155eef;
+  --cyan:#38bdf8;
+  --purple:#7c3aed;
+  --text:#172033;
+  --muted:#64748b;
+  --light:#f4f8ff;
+  --border:#e2e8f0;
+  --white:#fff;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+a{text-decoration:none;color:inherit}
+
+.topbar{
+  background:var(--navy);
+  color:#dbeafe;
+  text-align:center;
+  padding:10px;
+  font-size:10px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.navbar{
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(15px);
+}
+
+.brand{
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--navy);
+}
+
+.brand span{color:var(--blue);font-size:23px}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:27px;
+  font-size:11px;
+  font-weight:800;
+  color:#475569;
+}
+
+.nav a:hover{color:var(--blue)}
+
+.shop-btn{
+  background:var(--navy);
+  color:white!important;
+  padding:13px 20px;
+}
+
+.hero{
+  padding:105px 8% 90px;
+  background:
+    radial-gradient(circle at 85% 30%,rgba(56,189,248,.18),transparent 30%),
+    linear-gradient(120deg,#f6faff,#fff);
+}
+
+.eyebrow{
+  color:var(--blue);
+  font-size:10px;
+  letter-spacing:3px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+h1{
+  color:var(--navy);
+  font-size:clamp(55px,7vw,100px);
+  line-height:.88;
+  letter-spacing:-6px;
+  max-width:900px;
+}
+
+h1 span{color:var(--blue)}
+
+.hero p{
+  color:var(--muted);
+  max-width:600px;
+  line-height:1.8;
+  margin-top:28px;
+}
+
+.shop-area{
+  padding:80px 8% 120px;
+}
+
+.shop-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:40px;
+}
+
+.shop-header h2{
+  color:var(--navy);
+  font-size:42px;
+  letter-spacing:-2px;
+}
+
+.shop-header p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product{
+  border:1px solid var(--border);
+  background:white;
+  transition:.3s;
+}
+
+.product:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 60px rgba(7,26,82,.12);
+}
+
+.product-image{
+  height:330px;
+  background:linear-gradient(145deg,#edf7ff,#fff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.bottle{
+  width:105px;
+  height:240px;
+  border-radius:23px 23px 34px 34px;
+  background:linear-gradient(100deg,#fff,#d5eaff,#fff);
+  border:1px solid #c7def7;
+  box-shadow:18px 25px 45px rgba(21,94,239,.16);
+  position:relative;
+}
+
+.bottle:before{
+  content:"";
+  position:absolute;
+  width:55px;
+  height:20px;
+  left:25px;
+  top:-20px;
+  background:var(--navy);
+  border-radius:5px 5px 2px 2px;
+}
+
+.label{
+  position:absolute;
+  top:82px;
+  left:9px;
+  right:9px;
+  background:#fff;
+  padding:16px 4px;
+  text-align:center;
+  color:var(--navy);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.info{
+  padding:23px;
+}
+
+.info small{
+  color:var(--blue);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:2px;
+}
+
+.info h3{
+  color:var(--navy);
+  font-size:22px;
+  margin:8px 0;
+}
+
+.info p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+  min-height:58px;
+}
+
+.bottom{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.bottom strong{
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.view{
+  color:var(--blue);
+  font-size:10px;
+  font-weight:800;
+}
+
+.large .bottle{
+  width:125px;
+  height:280px;
+}
+
+footer{
+  background:#06143e;
+  color:#b9c8df;
+  padding:65px 8% 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:50px;
+}
+
+footer h4{
+  color:white;
+  font-size:10px;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+footer a,footer p{
+  display:block;
+  color:#b9c8df;
+  font-size:12px;
+  line-height:2;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:50px;
+  padding-top:20px;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+@media(max-width:1000px){
+  .nav{display:none}
+  .products{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:600px){
+  .hero{padding:70px 6%}
+  h1{font-size:55px}
+  .shop-area{padding:65px 6%}
+  .products{grid-template-columns:1fr}
+  .shop-header{display:block}
+  .shop-header p{margin-top:12px}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+REFRESH • REPLENISH • REPEAT — PREMIUM HYDRATION
+</div>
+
+<header class="navbar">
+
+<a href="index.html" class="brand">
+<span>AL</span> FURAAT WATERS
+</a>
+
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="shop.html">Shop</a>
+<a href="electrolytes.html">Electrolytes</a>
+<a href="about.html">About Us</a>
+<a href="story.html">Our Story</a>
+<a href="faq.html">FAQ</a>
+<a href="shop.html" class="shop-btn">SHOP NOW</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="eyebrow">
+AL FURAAT WATERS / THE COLLECTION
+</div>
+
+<h1>
+FIND YOUR
+<span>HYDRATION.</span>
+</h1>
+
+<p>
+Explore the AL FURAAT WATERS collection —
+from convenient single servings to larger
+formats designed for everyday hydration.
+</p>
+
+</section>
+
+<section class="shop-area">
+
+<div class="shop-header">
+
+<div>
+<div class="eyebrow">SHOP AL FURAAT</div>
+<h2>THE COLLECTION</h2>
+</div>
+
+<p>4 formats • Everyday hydration</p>
+
+</div>
+
+<div class="products">
+
+<article class="product">
+
+<a href="product-250ml.html">
+<div class="product-image">
+
+<div class="bottle">
+<div class="label">AL FURAAT<br>WATERS</div>
+</div>
+
+</div>
+</a>
+
+<div class="info">
+
+<small>SINGLE SERVE</small>
+
+<h3>250 ml Cup</h3>
+
+<p>
+Compact hydration for events,
+offices, schools and hospitality.
+</p>
+
+<div class="bottom">
+<strong>PRICE TBD</strong>
+<a class="view" href="product-250ml.html">VIEW →</a>
+</div>
+
+</div>
+
+</article>
+
+<article class="product">
+
+<a href="product-500ml.html">
+<div class="product-image">
+
+<div class="bottle">
+<div class="label">AL FURAAT<br>WATERS</div>
+</div>
+
+</div>
+</a>
+
+<div class="info">
+
+<small>EVERYDAY FAVORITE</small>
+
+<h3>500 ml Bottle</h3>
+
+<p>
+Perfect for gym, work,
+travel and everyday routines.
+</p>
+
+<div class="bottom">
+<strong>PRICE TBD</strong>
+<a class="view" href="product-500ml.html">VIEW →</a>
+</div>
+
+</div>
+
+</article>
+
+<article class="product large">
+
+<a href="product-1l.html">
+<div class="product-image">
+
+<div class="bottle">
+<div class="label">AL FURAAT<br>WATERS</div>
+</div>
+
+</div>
+</a>
+
+<div class="info">
+
+<small>LONGER DAYS</small>
+
+<h3>1 L Bottle</h3>
+
+<p>
+Larger everyday hydration for
+workouts and outdoor activities.
+</p>
+
+<div class="bottom">
+<strong>PRICE TBD</strong>
+<a class="view" href="product-1l.html">VIEW →</a>
+</div>
+
+</div>
+
+</article>
+
+<article class="product large">
+
+<a href="product-13l.html">
+<div class="product-image">
+
+<div class="bottle">
+<div class="label">AL FURAAT<br>13 L</div>
+</div>
+
+</div>
+</a>
+
+<div class="info">
+
+<small>HOME & WORK</small>
+
+<h3>13 L Bottle</h3>
+
+<p>
+Large-format hydration for homes,
+offices and workplaces.
+</p>
+
+<div class="bottom">
+<strong>PRICE TBD</strong>
+<a class="view" href="product-13l.html">VIEW →</a>
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<a href="index.html" class="brand">
+<span>AL</span> FURAAT WATERS
+</a>
+
+<p style="margin-top:18px;">
+Premium hydration for everyday life.
+</p>
+</div>
+
+<div>
+<h4>SHOP</h4>
+<a href="shop.html">All Products</a>
+<a href="product-250ml.html">250 ml Cup</a>
+<a href="product-500ml.html">500 ml Bottle</a>
+<a href="product-1l.html">1 L Bottle</a>
+<a href="product-13l.html">13 L Bottle</a>
+</div>
+
+<div>
+<h4>ABOUT</h4>
+<a href="about.html">About Us</a>
+<a href="story.html">Our Story</a>
+<a href="faq.html">FAQ</a>
+</div>
+
+<div>
+<h4>LOCATIONS</h4>
+<p>Dubai, United Arab Emirates</p>
+<p>Lahore, Pakistan</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 AL FURAAT WATERS
+</div>
+
+</footer>
+
+</body>
+</html>
