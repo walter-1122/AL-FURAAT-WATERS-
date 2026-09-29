@@ -1,1 +1,1100 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About Us — AL FURAAT WATERS</title><link rel="stylesheet" href="../assets/style.css"></head><body><header class="nav"><a class="logo" href="../index.html"><span>AL</span> FURAAT <b>WATERS</b></a><nav><a href="../index.html">Home</a><a href="shop.html">Shop</a><a href="electrolytes.html">Electrolytes</a><a class="active" href="about.html">About Us</a><a href="story.html">Our Story</a><a href="faq.html">FAQ</a></nav></header><section class="story"><p class="eyebrow">ABOUT AL FURAAT</p><h2>MODERN HYDRATION.<br><em>MADE SIMPLE.</em></h2><p>AL FURAAT WATERS is being built around a clean, premium hydration experience for everyday life. Our collection is designed to serve individual routines as well as homes, offices and hospitality environments.</p><div style="margin-top:55px;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:25px"><div class="product-card"><p class="eyebrow">DUBAI</p><h3>1st Branch</h3><p>Dubai, United Arab Emirates</p></div><div class="product-card"><p class="eyebrow">LAHORE</p><h3>2nd Branch</h3><p>Lahore, Pakistan</p></div></div></section></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | AL FURAAT WATERS</title>
+
+  <meta
+    name="description"
+    content="Learn about AL FURAAT WATERS and our approach to modern everyday hydration."
+  >
+
+  <style>
+    :root{
+      --navy:#071A52;
+      --blue:#155EEF;
+      --cyan:#38BDF8;
+      --purple:#7C3AED;
+      --white:#fff;
+      --soft:#EFF6FF;
+      --soft-purple:#F5F3FF;
+      --text:#111827;
+      --muted:#64748B;
+      --border:#E2E8F0;
+      --shadow:0 22px 60px rgba(7,26,82,.12);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* NAV */
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(226,232,240,.8);
+    }
+
+    .nav-inner{
+      max-width:1240px;
+      margin:auto;
+      padding:18px 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:900;
+      letter-spacing:-.7px;
+      color:var(--navy);
+      white-space:nowrap;
+    }
+
+    .logo span{
+      color:var(--blue);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .nav-links a{
+      color:#334155;
+      transition:.25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:var(--blue);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .nav-icon{
+      width:40px;
+      height:40px;
+      border:1px solid var(--border);
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      color:var(--navy);
+      font-weight:800;
+    }
+
+    .shop-btn{
+      background:var(--navy);
+      color:#fff;
+      padding:12px 19px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
+      transition:.25s;
+    }
+
+    .shop-btn:hover{
+      background:var(--blue);
+      transform:translateY(-2px);
+    }
+
+    .menu{
+      display:none;
+      border:0;
+      background:none;
+      font-size:25px;
+      cursor:pointer;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:610px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      position:relative;
+      color:#fff;
+
+      background:
+        radial-gradient(circle at 85% 20%,rgba(56,189,248,.28),transparent 28%),
+        radial-gradient(circle at 15% 90%,rgba(124,58,237,.28),transparent 30%),
+        linear-gradient(135deg,#071A52,#102D7D 55%,#155EEF);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:550px;
+      height:550px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:50%;
+      right:-220px;
+      top:-230px;
+    }
+
+    .hero-inner{
+      max-width:1160px;
+      width:100%;
+      margin:auto;
+      padding:95px 28px;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 14px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      margin-bottom:25px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--cyan);
+      box-shadow:0 0 15px var(--cyan);
+    }
+
+    .hero h1{
+      font-size:clamp(52px,7vw,88px);
+      line-height:.96;
+      letter-spacing:-4px;
+      max-width:850px;
+      margin-bottom:28px;
+    }
+
+    .hero h1 span{
+      color:#7DD3FC;
+    }
+
+    .hero p{
+      max-width:700px;
+      font-size:18px;
+      color:#DBEAFE;
+      line-height:1.8;
+      margin-bottom:32px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      padding:15px 23px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:850;
+      transition:.25s;
+    }
+
+    .btn-primary{
+      background:#fff;
+      color:var(--navy);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-3px);
+      box-shadow:0 15px 35px rgba(0,0,0,.2);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.3);
+      background:rgba(255,255,255,.07);
+      color:#fff;
+    }
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,.14);
+    }
+
+    /* SECTIONS */
+
+    .section{
+      padding:105px 28px;
+    }
+
+    .container{
+      max-width:1160px;
+      margin:auto;
+    }
+
+    .section-label{
+      color:var(--blue);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .section h2{
+      color:var(--navy);
+      font-size:clamp(36px,5vw,60px);
+      line-height:1.04;
+      letter-spacing:-2.8px;
+      margin-bottom:22px;
+    }
+
+    .section p{
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.85;
+    }
+
+    /* INTRO */
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:80px;
+      align-items:center;
+    }
+
+    .intro-copy{
+      max-width:600px;
+    }
+
+    .intro-copy p + p{
+      margin-top:18px;
+    }
+
+    .visual-card{
+      min-height:470px;
+      border-radius:35px;
+      overflow:hidden;
+      position:relative;
+      background:
+        radial-gradient(circle at 30% 25%,rgba(255,255,255,.5),transparent 8%),
+        radial-gradient(circle at 70% 70%,rgba(124,58,237,.4),transparent 25%),
+        linear-gradient(145deg,#38BDF8,#2563EB 50%,#4C1D95);
+      box-shadow:var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .visual-card::before{
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:50%;
+    }
+
+    .visual-card::after{
+      content:"";
+      position:absolute;
+      width:210px;
+      height:210px;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:50%;
+    }
+
+    .visual-text{
+      position:relative;
+      z-index:3;
+      text-align:center;
+      color:#fff;
+    }
+
+    .visual-text strong{
+      display:block;
+      font-size:32px;
+      letter-spacing:-1px;
+    }
+
+    .visual-text span{
+      display:block;
+      margin-top:8px;
+      font-size:12px;
+      letter-spacing:3px;
+      font-weight:800;
+      color:#DBEAFE;
+    }
+
+    /* VALUES */
+
+    .values{
+      background:linear-gradient(180deg,#F8FAFC,#fff);
+    }
+
+    .center-head{
+      max-width:760px;
+      margin:0 auto 55px;
+      text-align:center;
+    }
+
+    .value-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .value-card{
+      padding:35px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:28px;
+      box-shadow:0 12px 35px rgba(7,26,82,.05);
+      transition:.3s;
+    }
+
+    .value-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--shadow);
+    }
+
+    .value-number{
+      color:#94A3B8;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:1px;
+      margin-bottom:25px;
+    }
+
+    .value-icon{
+      width:58px;
+      height:58px;
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      background:linear-gradient(135deg,#DBEAFE,#EDE9FE);
+      font-size:25px;
+      margin-bottom:22px;
+    }
+
+    .value-card h3{
+      color:var(--navy);
+      font-size:23px;
+      margin-bottom:10px;
+    }
+
+    .value-card p{
+      font-size:14px;
+    }
+
+    /* MISSION */
+
+    .mission{
+      padding:105px 28px;
+      background:var(--navy);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .mission::before{
+      content:"";
+      position:absolute;
+      width:600px;
+      height:600px;
+      border-radius:50%;
+      background:rgba(21,94,239,.18);
+      filter:blur(30px);
+      right:-260px;
+      top:-250px;
+    }
+
+    .mission-inner{
+      max-width:1160px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:80px;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+
+    .mission .section-label{
+      color:#7DD3FC;
+    }
+
+    .mission h2{
+      color:#fff;
+      font-size:clamp(38px,5vw,62px);
+      line-height:1.02;
+      letter-spacing:-3px;
+    }
+
+    .mission-copy p{
+      color:#BFDBFE;
+      font-size:18px;
+      line-height:1.9;
+    }
+
+    .mission-copy p + p{
+      margin-top:18px;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:50px;
+    }
+
+    .experience-card{
+      min-height:220px;
+      padding:27px;
+      border-radius:24px;
+      background:linear-gradient(145deg,#EFF6FF,#F5F3FF);
+      border:1px solid #DBEAFE;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .experience-card::after{
+      content:"";
+      position:absolute;
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      background:rgba(56,189,248,.15);
+      right:-40px;
+      bottom:-40px;
+    }
+
+    .experience-card h3{
+      color:var(--navy);
+      margin-bottom:10px;
+      font-size:19px;
+    }
+
+    .experience-card p{
+      font-size:14px;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 28px;
+    }
+
+    .cta-box{
+      max-width:1160px;
+      margin:auto;
+      padding:75px 45px;
+      border-radius:35px;
+      text-align:center;
+      color:#fff;
+
+      background:
+        radial-gradient(circle at 20% 20%,rgba(56,189,248,.22),transparent 28%),
+        radial-gradient(circle at 80% 80%,rgba(124,58,237,.28),transparent 30%),
+        linear-gradient(135deg,var(--navy),#12358E);
+    }
+
+    .cta-box h2{
+      color:#fff;
+      font-size:clamp(37px,5vw,60px);
+      line-height:1.05;
+      letter-spacing:-2.5px;
+      margin-bottom:18px;
+    }
+
+    .cta-box p{
+      color:#DBEAFE;
+      max-width:650px;
+      margin:0 auto 30px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#040F31;
+      color:#CBD5E1;
+      padding:65px 28px 30px;
+    }
+
+    .footer-grid{
+      max-width:1160px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:45px;
+    }
+
+    .footer-logo{
+      font-size:22px;
+      color:#fff;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .footer-logo span{
+      color:#38BDF8;
+    }
+
+    .footer-brand p{
+      color:#94A3B8;
+      max-width:330px;
+      font-size:14px;
+    }
+
+    footer h4{
+      color:#fff;
+      margin-bottom:18px;
+      font-size:14px;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:10px;
+    }
+
+    .footer-links a{
+      color:#94A3B8;
+      font-size:14px;
+      transition:.2s;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    .footer-bottom{
+      max-width:1160px;
+      margin:auto;
+      padding-top:25px;
+      border-top:1px solid rgba(255,255,255,.08);
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:#64748B;
+      font-size:12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .menu{
+        display:block;
+        color:var(--navy);
+      }
+
+      .nav-actions .nav-icon{
+        display:none;
+      }
+
+      .intro-grid,
+      .mission-inner{
+        grid-template-columns:1fr;
+        gap:45px;
+      }
+
+      .value-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .experience-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+
+    @media(max-width:650px){
+
+      .nav-inner{
+        padding:15px 18px;
+      }
+
+      .logo{
+        font-size:18px;
+      }
+
+      .shop-btn{
+        padding:10px 14px;
+        font-size:12px;
+      }
+
+      .hero-inner{
+        padding:75px 20px;
+      }
+
+      .hero h1{
+        letter-spacing:-2.5px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section,
+      .mission,
+      .cta{
+        padding:75px 20px;
+      }
+
+      .value-grid,
+      .experience-grid{
+        grid-template-columns:1fr;
+      }
+
+      .visual-card{
+        min-height:360px;
+      }
+
+      .cta-box{
+        padding:55px 25px;
+        border-radius:25px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="nav-inner">
+
+      <a href="index.html" class="logo">
+        AL FURAAT <span>WATERS</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="electrolytes.html">Electrolytes</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="story.html">Our Story</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="shop.html" class="nav-icon">⌕</a>
+        <a href="shop.html" class="nav-icon">🛒</a>
+        <a href="shop.html" class="shop-btn">SHOP NOW</a>
+        <button class="menu">☰</button>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="eyebrow">
+        ABOUT AL FURAAT WATERS
+      </div>
+
+      <h1>
+        HYDRATION<br>
+        <span>REIMAGINED.</span>
+      </h1>
+
+      <p>
+        AL FURAAT WATERS was created with a simple idea:
+        hydration should feel as good as it tastes.
+        We are building a clean, modern experience around everyday hydration.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="shop.html" class="btn btn-primary">
+          EXPLORE PRODUCTS
+        </a>
+
+        <a href="story.html" class="btn btn-outline">
+          OUR STORY
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="intro-grid">
+
+        <div class="intro-copy">
+
+          <div class="section-label">
+            WHO WE ARE
+          </div>
+
+          <h2>
+            A MODERN APPROACH TO EVERYDAY HYDRATION.
+          </h2>
+
+          <p>
+            AL FURAAT WATERS is built around a straightforward idea:
+            make hydration simple, refreshing and easy to fit into everyday life.
+          </p>
+
+          <p>
+            From convenient single-serve options to larger formats for home
+            and work, our range is designed around different moments in your day.
+          </p>
+
+        </div>
+
+
+        <div class="visual-card">
+
+          <div class="visual-text">
+            <strong>AL FURAAT</strong>
+            <span>REFRESH • REPLENISH • REPEAT</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- VALUES -->
+  <section class="section values">
+
+    <div class="container">
+
+      <div class="center-head">
+
+        <div class="section-label">
+          WHAT WE BELIEVE
+        </div>
+
+        <h2>
+          BUILT AROUND THE WAY YOU LIVE.
+        </h2>
+
+        <p>
+          Every part of the AL FURAAT WATERS experience is designed to keep
+          hydration clear, convenient and refreshing.
+        </p>
+
+      </div>
+
+
+      <div class="value-grid">
+
+        <article class="value-card">
+
+          <div class="value-number">01</div>
+
+          <div class="value-icon">💧</div>
+
+          <h3>SIMPLICITY</h3>
+
+          <p>
+            Hydration does not need to be complicated. We focus on a clean
+            experience that makes choosing your water easy.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="value-number">02</div>
+
+          <div class="value-icon">✨</div>
+
+          <h3>QUALITY</h3>
+
+          <p>
+            We aim to create a consistent and premium experience across our
+            products, presentation and customer journey.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="value-number">03</div>
+
+          <div class="value-icon">⚡</div>
+
+          <h3>ENERGY</h3>
+
+          <p>
+            Modern life moves quickly. Our brand is designed to feel fresh,
+            energetic and ready for wherever the day goes.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MISSION -->
+  <section class="mission">
+
+    <div class="mission-inner">
+
+      <div>
+
+        <div class="section-label">
+          OUR MISSION
+        </div>
+
+        <h2>
+          MAKE EVERY<br>
+          DROP FEEL<br>
+          REFRESHING.
+        </h2>
+
+      </div>
+
+
+      <div class="mission-copy">
+
+        <p>
+          Our mission is to build a hydration brand that people can easily
+          understand, enjoy and make part of their everyday routine.
+        </p>
+
+        <p>
+          Whether it is a busy morning, a day at the office, a workout,
+          a journey or time at home, AL FURAAT WATERS is designed to fit
+          naturally into the moment.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-label">
+        DESIGNED FOR LIFE
+      </div>
+
+      <h2>
+        WHEREVER LIFE<br>
+        TAKES YOU.
+      </h2>
+
+      <div class="experience-grid">
+
+        <div class="experience-card">
+          <h3>GYM</h3>
+          <p>
+            A convenient hydration option for active routines and workout days.
+          </p>
+        </div>
+
+        <div class="experience-card">
+          <h3>OFFICE</h3>
+          <p>
+            Keep hydration close throughout long workdays and busy schedules.
+          </p>
+        </div>
+
+        <div class="experience-card">
+          <h3>TRAVEL</h3>
+          <p>
+            Designed for people who are always moving from one place to another.
+          </p>
+        </div>
+
+        <div class="experience-card">
+          <h3>HOME</h3>
+          <p>
+            Larger formats designed around convenient hydration at home and work.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="cta-box">
+
+      <h2>
+        YOUR HYDRATION.<br>
+        YOUR WAY.
+      </h2>
+
+      <p>
+        Discover the AL FURAAT WATERS collection and find the format that
+        fits your everyday routine.
+      </p>
+
+      <a href="shop.html" class="btn btn-primary">
+        SHOP NOW
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+          AL FURAAT <span>WATERS</span>
+        </div>
+
+        <p>
+          Clean hydration. Essential electrolytes. Refreshing taste.
+          Made for everyday life.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>SHOP</h4>
+
+        <div class="footer-links">
+          <a href="shop.html">All Products</a>
+          <a href="product-250ml.html">250 ml Cup</a>
+          <a href="product-500ml.html">500 ml Bottle</a>
+          <a href="product-1l.html">1 L Bottle</a>
+          <a href="product-13l.html">13 L Bottle</a>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h4>EXPLORE</h4>
+
+        <div class="footer-links">
+          <a href="electrolytes.html">Electrolytes</a>
+          <a href="about.html">About Us</a>
+          <a href="story.html">Our Story</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h4>AL FURAAT WATERS</h4>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop Now</a>
+          <a href="faq.html">Help & FAQ</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 AL FURAAT WATERS. All rights reserved.
+      </span>
+
+      <span>
+        REFRESH • REPLENISH • REPEAT.
+      </span>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
