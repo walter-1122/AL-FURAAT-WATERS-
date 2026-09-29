@@ -1,0 +1,117 @@
+from pathlib import Path
+
+html = """<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — AL FURAAT WATERS</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:#f7faff;color:#111827;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:20px 6%;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid #e5e7eb}
+    .logo{font-weight:900;letter-spacing:-1px;color:#071a52}.logo span{color:#155eef}.logo b{color:#155eef}
+    nav{display:flex;gap:26px;font-size:14px;font-weight:700}
+    nav a:hover{color:#155eef}
+    .nav-btn{padding:12px 18px;border-radius:999px;background:#071a52;color:#fff;font-weight:800;font-size:13px}
+    .hero{padding:100px 7% 80px;background:linear-gradient(135deg,#071a52 0%,#155eef 55%,#4c1d95 100%);color:#fff}
+    .eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;opacity:.75;margin-bottom:18px}
+    h1{font-size:clamp(48px,8vw,94px);line-height:.95;letter-spacing:-5px;max-width:1000px}
+    .hero p{max-width:650px;margin-top:28px;font-size:19px;color:#dbeafe}
+    .section{padding:90px 7%}
+    .section-head{max-width:760px;margin-bottom:45px}
+    .section-head h2{font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-3px;color:#071a52}
+    .section-head p{margin-top:18px;color:#64748b;font-size:17px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:28px;padding:34px;min-height:300px;box-shadow:0 18px 50px rgba(7,26,82,.07)}
+    .card.featured{background:linear-gradient(145deg,#071a52,#155eef);color:#fff;border:none;transform:translateY(-8px)}
+    .number{font-size:12px;font-weight:900;letter-spacing:2px;color:#155eef}
+    .featured .number{color:#bae6fd}
+    .card h3{font-size:27px;line-height:1.05;margin:25px 0 15px;color:#071a52}
+    .featured h3{color:#fff}
+    .card p{color:#64748b}.featured p{color:#dbeafe}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+    .tag{padding:8px 11px;border-radius:999px;background:#eff6ff;color:#155eef;font-size:12px;font-weight:800}
+    .featured .tag{background:rgba(255,255,255,.13);color:#fff}
+    .cta{margin:0 7% 80px;padding:65px;border-radius:35px;background:#071a52;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta h2{font-size:clamp(32px,4vw,54px);line-height:1;letter-spacing:-2px}
+    .cta p{color:#cbd5e1;margin-top:14px;max-width:600px}
+    .cta a{display:inline-block;background:#fff;color:#071a52;padding:15px 22px;border-radius:999px;font-weight:900;white-space:nowrap}
+    footer{padding:40px 7%;background:#020817;color:#94a3b8;display:flex;justify-content:space-between;gap:20px;font-size:13px}
+    @media(max-width:850px){nav{display:none}.grid{grid-template-columns:1fr}.card.featured{transform:none}.cta{margin:0 5% 55px;padding:40px 28px;display:block}.cta a{margin-top:25px}h1{letter-spacing:-3px}}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="index.html"><span>AL</span> FURAAT <b>WATERS</b></a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="electrolytes.html">Electrolytes</a>
+    <a href="about.html">About Us</a>
+    <a href="story.html">Our Story</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+  <a class="nav-btn" href="#custom">BUSINESS SOLUTIONS ↗</a>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">AL FURAAT WATERS / SERVICES</div>
+  <h1>HYDRATION<br>BUILT FOR BUSINESS.</h1>
+  <p>From everyday hydration to custom-branded water solutions, we help businesses create a professional hydration experience around their own identity.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow" style="color:#155eef">WHAT WE OFFER</div>
+    <h2>More than just bottled water.</h2>
+    <p>Explore flexible solutions designed for companies, hospitality, events, workplaces and growing brands.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="number">01 / HYDRATION</div>
+      <h3>Everyday Water Supply</h3>
+      <p>Water formats for homes, offices, workplaces, hospitality and everyday routines.</p>
+      <div class="tags"><span class="tag">250 ML</span><span class="tag">500 ML</span><span class="tag">1 L</span><span class="tag">13 L</span></div>
+    </article>
+
+    <article class="card">
+      <div class="number">02 / BUSINESS</div>
+      <h3>Bulk & Commercial Orders</h3>
+      <p>Flexible ordering options for businesses, events, hospitality and larger-volume requirements.</p>
+      <div class="tags"><span class="tag">OFFICES</span><span class="tag">EVENTS</span><span class="tag">HOSPITALITY</span></div>
+    </article>
+
+    <article class="card featured" id="custom">
+      <div class="number">03 / CUSTOM BRANDING</div>
+      <h3>Custom Bottle Moulding & Branding</h3>
+      <p>Create a water product around your own brand. Custom bottle moulding and branding solutions can be developed for companies looking for a distinctive bottle and branded presentation.</p>
+      <div class="tags"><span class="tag">CUSTOM MOULDING</span><span class="tag">PRIVATE LABEL</span><span class="tag">BRANDED PACKAGING</span><span class="tag">CORPORATE</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <div class="eyebrow">CUSTOM PROJECTS</div>
+    <h2>Your bottle. Your brand. Your identity.</h2>
+    <p>Tell us what you have in mind for your custom bottle, branding or business hydration project.</p>
+  </div>
+  <a href="mailto:info@alfuraatwaters.com">DISCUSS YOUR PROJECT ↗</a>
+</section>
+
+<footer>
+  <div>© AL FURAAT WATERS</div>
+  <div>REFRESH • REPLENISH • REPEAT.</div>
+</footer>
+
+</body>
+</html>
+"""
+
+path = Path("/mnt/data/services.html")
+path.write_text(html, encoding="utf-8")
+print(f"Created: {path}")
